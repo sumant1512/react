@@ -44,6 +44,7 @@ function App() {
         <div className="container">
           <Routes>
             <Route
+              exact
               path="/"
               element={
                 <TextTransformComponent
@@ -53,7 +54,7 @@ function App() {
                 />
               }
             />
-            <Route path="/about" element={<About />} />
+            <Route exact path="/about" element={<About />} />
           </Routes>
         </div>
       </div>

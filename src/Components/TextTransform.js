@@ -40,22 +40,38 @@ function TextTransformComponent(props) {
             rows="8"
           ></textarea>
         </div>
-        <button className="btn btn-primary mt-3 me-3" onClick={onUpClick}>
+        <button
+          disabled={text.length === 0}
+          className="btn btn-primary mt-3 me-3"
+          onClick={onUpClick}
+        >
           Convert To Upper Case
         </button>
-        <button className="btn btn-primary mt-3 me-3" onClick={onLowClick}>
+        <button
+          disabled={text.length === 0}
+          className="btn btn-primary mt-3 me-3"
+          onClick={onLowClick}
+        >
           Convert To Lower Case
         </button>
-        <button className="btn btn-primary mt-3 me-3" onClick={onClearClick}>
+        <button
+          disabled={text.length === 0}
+          className="btn btn-primary mt-3 me-3"
+          onClick={onClearClick}
+        >
           Clear
         </button>
       </div>
       <div className="my-3">
         <h2>Your Text Summary</h2>
         <p>{text.length} Characters</p>
-        <p>{text.length > 0 ? text.split(" ").length : 0} Words</p>
         <p>
-          Time needed to read these words is {text.split(" ").length * 0.008}{" "}
+          {text.split(" ").filter((element) => element.length > 0).length} Words
+        </p>
+        <p>
+          Time needed to read these words is{" "}
+          {text.split(" ").filter((element) => element.length > 0).length *
+            0.008}{" "}
           minute
         </p>
         <h2>Preview</h2>
