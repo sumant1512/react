@@ -58,52 +58,32 @@ function NavbarComponent(props) {
               </Link>
             </li>
           </ul>
-          <form className="d-flex">
-            <div className="form-check">
-              <input
-                className="form-check-input"
-                type="radio"
-                name="themeRadio"
-                id="redTheme"
-                onClick={() => {
-                  props.handleTheme({ bgColor: "red", color: "white" });
-                }}
-              />
-            </div>
-            <div className="form-check">
-              <input
-                className="form-check-input"
-                type="radio"
-                name="themeRadio"
-                id="greenTheme"
-                onClick={() => {
-                  props.handleTheme({ bgColor: "green", color: "white" });
-                }}
-              />
-            </div>
-            <div className="form-check">
-              <input
-                className="form-check-input"
-                type="radio"
-                name="themeRadio"
-                id="darkTheme"
-                onClick={() => {
-                  props.handleTheme({ bgColor: "black", color: "white" });
-                }}
-              />
-            </div>
-            <div className="form-check">
-              <input
-                className="form-check-input"
-                type="radio"
-                name="themeRadio"
-                id="lightTheme"
-                onClick={() => {
-                  props.handleTheme({ bgColor: "white", color: "black" });
-                }}
-              />
-            </div>
-          </form>
+          <div className="d-flex">
+            <div
+              className="red-btn border mx-1"
+              onClick={() => {
+                props.handleTheme({ bgColor: "red", color: "white" });
+              }}
+            ></div>
+            <div
+              className="green-btn border mx-1"
+              onClick={() => {
+                props.handleTheme({ bgColor: "green", color: "white" });
+              }}
+            ></div>
+            <div
+              className="black-btn border mx-1"
+              onClick={() => {
+                props.handleTheme({ bgColor: "black", color: "white" });
+              }}
+            ></div>
+            <div
+              className="white-btn border mx-1"
+              onClick={() => {
+                props.handleTheme({ bgColor: "white", color: "black" });
+              }}
+            ></div>
+          </div>
         </div>
       </div>
     </nav>

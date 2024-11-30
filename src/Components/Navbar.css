@@ -1,3 +1,35 @@
+.red-btn {
+  width: 25px;
+  height: 25px;
+  background-color: red;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.green-btn {
+  width: 25px;
+  height: 25px;
+  background-color: green;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.black-btn {
+  width: 25px;
+  height: 25px;
+  background-color: black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.white-btn {
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .navbar-black {
   color: white;
 }
