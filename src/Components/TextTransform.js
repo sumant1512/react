@@ -66,11 +66,12 @@ function TextTransformComponent(props) {
         <h2>Your Text Summary</h2>
         <p>{text.length} Characters</p>
         <p>
-          {text.split(" ").filter((element) => element.length > 0).length} Words
+          {text.split(/\s+/).filter((element) => element.length > 0).length}{" "}
+          Words
         </p>
         <p>
           Time needed to read these words is{" "}
-          {text.split(" ").filter((element) => element.length > 0).length *
+          {text.split(/\s+/).filter((element) => element.length > 0).length *
             0.008}{" "}
           minute
         </p>
